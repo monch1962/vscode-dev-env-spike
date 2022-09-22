@@ -7,7 +7,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-alpine-${VARIANT}
 # ** [Optional] Uncomment this section to install additional packages. **
 RUN apk update \
     && apk upgrade \
-    && apk add --no-cache git python3 go zsh terraform vim py3-pip unzip tzdata ca-certificates jq #rust
+    && apk add --no-cache git python3 go zsh terraform vim py3-pip unzip tzdata ca-certificates jq cosign #rust
 
 ARG OPA_VERSION="v0.43.0"
 RUN curl -L -o opa https://openpolicyagent.org/downloads/${OPA_VERSION}/opa_linux_amd64_static
